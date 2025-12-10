@@ -1,0 +1,163 @@
+:root {
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+               Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --bg: #fff;
+      --fg: #111;
+      --muted: #555;
+      --link: inherit;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 420px;
+      margin: 10vh auto 0;
+      padding: 0 16px 24px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 0.25rem;
+      font-weight: 600;
+    }
+
+    p.subtitle {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav, section { margin: 1.5rem 0; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    li + li { margin-top: .5rem; }
+
+    /* tooltip */
+    .tooltip {
+      position: fixed;
+      top: 0; left: 0;
+      /* place to the right/below cursor; no centering */
+      transform: none;
+      background: var(--fg);
+      color: var(--bg);
+      padding: 6px 8px;
+      border-radius: 6px;
+      font-size: .875rem;
+      line-height: 1.3;
+      pointer-events: none;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      opacity: 0;
+      transition: opacity 80ms linear;
+    }
+    .tooltip.show { opacity: 1; }
+
+    a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    .email-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      margin-top: 2px;
+      border: none;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 140ms ease;
+    }
+
+    .copy-btn:hover {
+      color: var(--fg);
+    }
+
+    .copy-btn.copied {
+      color: var(--fg);
+    }
+
+    .copy-btn:active {
+      transform: translateY(1px);
+    }
+
+    .copy-btn:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+
+    .copy-icon {
+      position: relative;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+
+    .copy-icon::before,
+    .copy-icon::after {
+      content: "";
+      position: absolute;
+      border: 1.5px solid currentColor;
+      border-radius: 3px;
+      width: 12px;
+      height: 12px;
+      box-sizing: border-box;
+      transition: all 160ms ease;
+    }
+
+    .copy-icon::before {
+      top: 1px;
+      left: 1px;
+    }
+
+    .copy-icon::after {
+      top: -2px;
+      left: 4px;
+      opacity: 0.55;
+    }
+
+    .copy-btn.copied .copy-icon::before {
+      width: 9px;
+      height: 5px;
+      border-radius: 2px;
+      border: 0;
+      border-left: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      top: 5px;
+      left: 3px;
+    }
+
+    .copy-btn.copied .copy-icon::after {
+      opacity: 0;
+    }
+
+    footer { margin-top: 2rem; color: var(--muted); font-size: .875rem; }
+
+    @media (prefers-color-scheme: dark) {
+        :root { --bg:#0b0b0b; --fg:#f3f3f3; --muted:#aaa; }
+    }

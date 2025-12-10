@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tanner Cheek — Portfolio</title>
+    <meta name="description" content="Personal portfolio for Tanner Cheek" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <h1>Tanner Cheek's Stuff</h1>
+        <p class="subtitle">
+          I like making stuff! Here's some stuff I've made.
+        </p>
+      </header>
+
+      <section aria-labelledby="projects">
+        <h2 id="projects" style="position: absolute; left: -9999px">
+          Projects
+        </h2>
+        <ul>
+          <li>
+            <a
+              href="https://tannercheek.github.io/atmosfy/"
+              data-tooltip="ambient sound mixer + YouTube 🎧"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Atmosfy</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://tannercheek.notion.site/2c5d640025d180cca655ef53be3e0807?v=2c5d640025d180b38e99000cc76925de&source=copy_link"
+              data-tooltip="other projects i've been working on ⚔️"
+              target="_blank"
+              rel="noopener noreferrer"
+              >More...</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <nav aria-labelledby="socials">
+        <h2 id="socials" style="position: absolute; left: -9999px">Socials</h2>
+        <ul>
+          <li>
+            <a
+              href="https://github.com/tannercheek"
+              data-tooltip="My GitHub Profile 👨‍💻"
+              rel="me noopener noreferrer"
+              target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/tannercheek/"
+              data-tooltip="My Very Professional LinkedIn Profile 💼"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="email-item">
+            <a
+              href="mailto:hello.tannercheek@gmail.com"
+              data-tooltip="send me an email? 📧"
+              >Email</a
+            >
+            <button
+              type="button"
+              class="copy-btn"
+              data-email="hello.tannercheek@gmail.com"
+              aria-label="Copy email address"
+            >
+              <span class="copy-icon" aria-hidden="true"></span>
+            </button>
+          </li>
+          <li>
+            <a
+              href="https://x.com/sparklincentaur"
+              data-tooltip="My twitter profile I guess 🤷‍♂️"
+              rel="me noopener noreferrer"
+              target="_blank"
+              >X (Twitter)</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <footer>
+        <small>&copy; <span id="year"></span> Tanner Cheek</small>
+      </footer>
+    </main>
+    <script src="./src/script.js" defer></script>
+  </body>
+</html>
